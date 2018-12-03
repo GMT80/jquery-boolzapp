@@ -70,7 +70,6 @@ height: 100%;
 .column_right {
 width: 60%;
 height: 100%;
-background-color: lightcoral;
 }
 
 /* style column left */
@@ -139,7 +138,6 @@ align-items: center;
 .search_input {
 width: 80%;
 height: 100%;
-background-color: coral;
 }
 
 .chat {
@@ -228,6 +226,7 @@ font-size: 12px;
   width: 100%;
   height: 80%;
   background-color: #E6DDDA;
+  overflow-y: scroll;
 }
 /* footer */
 
@@ -246,4 +245,29 @@ font-size: 12px;
   height: 100%;
   float: left;
   padding: 10px 0;
+}
+
+/* messaggi */
+.green_message, .white_message {
+  width: 55%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+}
+.green_message {
+  background-color: #DBF7C5;
+  float: right;
+}
+
+.green_message > span,
+.white_message > span {
+  font-size: 10px;
+  text-align: right;
+  display: block;
+}
+
+.white_message {
+  background-color: white;
+  float: left;
 }
