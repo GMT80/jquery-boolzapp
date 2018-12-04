@@ -10,15 +10,9 @@ font-family: 'Roboto', sans-serif;
 overflow-y:hidden;
 }
 
-.container:after {
-content: "";
-display: table;
-clear: both;
-}
-
 i {
 cursor: pointer;
-font-size: 20px;
+font-size: 25px;
 color: #77787B;
 }
 
@@ -270,4 +264,14 @@ font-size: 12px;
 .white_message {
   background-color: white;
   float: left;
+}
+
+.green_message_new {
+  width: 55%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  background-color: #DBF7C5;
+  float: right;
 }
