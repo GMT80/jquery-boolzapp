@@ -14,15 +14,19 @@ $(document).ready(function(){
         // console.log(newMessageTemplate);
 // per pulire i float
         var clearFix = $('.template .clearfix');
+// data
+        var hour = new Date();
 // inserisce il testo inserito dall'utente
         newMessageTemplate.text(newMessage);
+// inserisce data in tempo reale
+        $('.time').text(hour.getHours() + ':' + hour.getMinutes());
 
 // si appende nel container principale
         $('.main_content').append(newMessageTemplate);
         $('.main_content').append(clearFix);
 // si resetta l'input
         $('#sendMessageInput').val('');
-
+// risposta automatica
         setTimeout(function(){
 
           var answerMessage = $('.template .white_message');

@@ -39,6 +39,10 @@ input:focus {
   outline: none;
 }
 
+.clearfix {
+  clear: both;
+}
+
 .border {
 width: 100%;
 height: 120px;
@@ -159,12 +163,15 @@ float: left;
 }
 
 .chat_logo {
-width: 20%;
+width: 15%;
 height: 100%;
+margin: auto;
+display: flex;
+align-items: center;
 }
 
 .chat_text {
-width: 60%;
+width: 65%;
 height: 100%;
 }
 
@@ -172,6 +179,7 @@ height: 100%;
 font-size: 15px;
 padding-bottom: 5px;
 color: #77787B;
+margin-left: 10px;
 }
 
 .chat_text p {
@@ -179,6 +187,7 @@ font-size: 12px;
 overflow: hidden;
 text-overflow: "...";
 white-space: nowrap;
+margin-left: 10px;
 }
 
 .chat_hour {
@@ -278,20 +287,6 @@ font-size: 10px;
   background-color: white;
   float: left;
   text-align: left;
-}
-
-.green_message.new {
-  width: 55%;
-  margin: 5px;
-  padding: 10px;
-  font-size: 13px;
-  border-radius: 5px;
-  background-color: #DBF7C5;
-  float: right;
-}
-
-.clearfix {
-  clear: both;
 }
 
 .template {
