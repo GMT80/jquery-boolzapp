@@ -65,19 +65,27 @@ $(document).ready(function() {
 
 
   });
-  
-// // fa apparire nuove conversazioni
-//   $('#laura').on('click', function(){
-//
-//       $('.conversazione').removeClass('nascosta');
-//
-//   });
+
+// fa apparire nuove conversazioni
+  $('#david').on('click', function(){
+
+      $('.green_message').addClass('hidden');
+      $('.white_message').addClass('hidden');
+      $('.chat_david').removeClass('hidden');
+
+  });
+
+  $(".fa-angle-down").on('click', function() {
+    $('.DropDownMenu').slideToggle();
+  });
+
 // // rimuove conversazioni
-//   $('#cancella').on('click', function(){
-//
-//       $('.conversazione').hide();
-//
-//   });
+  $('#remove').on('click', function(){
+
+      $('.chat_david').hide();
+      $('.DropDownMenu').hide();
+
+  });
 
 
 

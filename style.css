@@ -39,6 +39,19 @@ input:focus {
   outline: none;
 }
 
+span {
+  font-size: 10px;
+  text-align: right;
+  display: block;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: #77787B;
+  display: inline-block;
+}
+
 .clearfix {
   clear: both;
 }
@@ -275,14 +288,6 @@ font-size: 10px;
   float: right;
 }
 
-.green_message > span,
-.white_message > span {
-  font-size: 10px;
-  text-align: right;
-  display: block;
-  text-align: right;
-}
-
 .white_message {
   background-color: white;
   float: left;
@@ -291,4 +296,46 @@ font-size: 10px;
 
 .template {
   display: none;
+}
+
+.chat_david {
+  min-width: 20%;
+  max-width: 55%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  background-color: #DBF7C5;
+  float: right;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-angle-down {
+  display:inline-block;
+  float: right;
+  padding-bottom: 3px;
+}
+
+.DropDownMenu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: white;
+}
+
+.DropDownMenuItem {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.DropDownMenuItem:hover {
+  background: #E8EAEC;
+}
+
+.down {
+  display:none;
 }
