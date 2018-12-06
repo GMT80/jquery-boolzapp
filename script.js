@@ -1,42 +1,84 @@
 
-// apertura jquery
-$(document).ready(function(){
-// dall'input dell'utente alla pressione del tasto
-  $('#sendMessageInput').on('keypress', function(event) {
-// evento della pressione del tasto Invio(13)
-      if (event.which == 13) {
-        // console.log(event.which);
-// si recupera il valore dell'input
-        var newMessage = $('#sendMessageInput').val();
-        // console.log(newMessage);
-// si entra nel messaggio vuoto
-        var newMessageTemplate =   $('.template .green_message');
-        // console.log(newMessageTemplate);
-// per pulire i float
-        var clearFix = $('.template .clearfix');
-// data
-        var hour = new Date();
-// inserisce il testo inserito dall'utente
-        newMessageTemplate.text(newMessage);
-// inserisce data in tempo reale
+$(document).ready(function() {
+
+    $('#sendMessageInput').on('keypress', function(e){
+
+    if (e.which == 13) {
+
+      var messaggioinserito = $('#sendMessageInput').val();
+      console.log(messaggioinserito);
+
+      var contenitorenuovomessaggio = $('.template .green_message').clone();
+      contenitorenuovomessaggio.text(messaggioinserito);
+
+      contenitorenuovomessaggio.children('.time').text()
+
+      var clearfix = $('.template .clearfix').clone();
+      console.log(contenitorenuovomessaggio);
+
+      var hour = new Date();
+
+      $('.main_content').append(contenitorenuovomessaggio);
+
+      $('.main_content').append(clearfix);
+
+      $('#sendMessageInput').val('');
+
+      setTimeout(function() {
+
+
+        var messaggiodirisposta = $('.template .white_message').clone();
+        messaggiodirisposta.text();
+
+        var clearfix = $('.template .clearfix').clone();
+        console.log(contenitorenuovomessaggio);
+
+        $('.main_content').append(messaggiodirisposta);
         $('.time').text(hour.getHours() + ':' + hour.getMinutes());
 
-// si appende nel container principale
-        $('.main_content').append(newMessageTemplate);
-        $('.main_content').append(clearFix);
-// si resetta l'input
-        $('#sendMessageInput').val('');
-// risposta automatica
-        setTimeout(function(){
+        $('.main_content').append(clearfix);
 
-          var answerMessage = $('.template .white_message');
+      }, 1500);
 
-          $('.main_content').append(answerMessage);
-
-        }, 1500);
-
-      };
+    };
 
   });
+
+  $('#searchContact').on('keyup', function(){
+
+    var cosahascrittolutente = $('#searchContact').val().toLowerCase();
+    // console.log(cosahascrittolutente);
+
+    $('.chat').each(function(){
+
+        var listadeicontatti = $(this).find('.chat_text').text().toLowerCase();
+        // console.log(listadeicontatti);
+
+        if (listadeicontatti.includes(cosahascrittolutente)) {
+          $(this).show();
+        }
+        else {
+          $(this).hide();
+        };
+
+    });
+
+
+  });
+  
+// // fa apparire nuove conversazioni
+//   $('#laura').on('click', function(){
+//
+//       $('.conversazione').removeClass('nascosta');
+//
+//   });
+// // rimuove conversazioni
+//   $('#cancella').on('click', function(){
+//
+//       $('.conversazione').hide();
+//
+//   });
+
+
 
 });
