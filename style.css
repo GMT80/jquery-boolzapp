@@ -315,9 +315,9 @@ font-size: 10px;
 }
 
 .fa-angle-down {
-  display:inline-block;
   float: right;
-  padding-bottom: 3px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .DropDownMenu {

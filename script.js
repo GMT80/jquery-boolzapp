@@ -69,24 +69,21 @@ $(document).ready(function() {
 // fa apparire nuove conversazioni
   $('#david').on('click', function(){
 
-      $('.green_message').addClass('hidden');
-      $('.white_message').addClass('hidden');
+      $('.green_message, .white_message').addClass('hidden');
       $('.chat_david').removeClass('hidden');
 
+      $(".fa-angle-down").on('click', function() {
+        $('.DropDownMenu').slideToggle();
+      });
+
+    // // rimuove conversazioni
+      $('#remove').on('click', function(){
+
+          $('.chat_david').hide();
+
+      });
+
   });
-
-  $(".fa-angle-down").on('click', function() {
-    $('.DropDownMenu').slideToggle();
-  });
-
-// // rimuove conversazioni
-  $('#remove').on('click', function(){
-
-      $('.chat_david').hide();
-      $('.DropDownMenu').hide();
-
-  });
-
 
 
 });
